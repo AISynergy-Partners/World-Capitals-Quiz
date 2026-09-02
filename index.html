@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Capitals — Test Your Knowledge</title>
+<meta name="description" content="An interactive quiz on the capitals of the world — multiple choice, fill in the blank, or match the pairs. Updated for 2026, including capitals that have recently changed.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="World Capitals — Test Your Knowledge">
+<meta property="og:description" content="An interactive quiz on the capitals of the world, current as of 2026.">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="topbar">
+      <div class="wordmark" id="wordmark-home">World Capitals<span class="dot">.</span></div>
+    </div>
+
+    <div class="news-banner">
+      <div class="news-banner__label"><span class="pulse"></span> Around the World</div>
+      <div class="news-banner__body">
+        <span class="news-banner__flag" id="banner-flag">&#127760;</span>
+        <span class="news-banner__text" id="banner-text">Loading today's fact&hellip;</span>
+      </div>
+      <div class="news-banner__bar"><div class="news-banner__bar-fill" id="banner-bar-fill"></div></div>
+    </div>
+
+    <main>
+      <div id="screen-root"></div>
+    </main>
+
+    <footer class="page-footer">
+      <p>Built for the curious. Capital data last verified <span id="last-verified"></span> — checked automatically every month.
+        <button class="footer-link" id="changelog-toggle" type="button">View changelog</button>
+      </p>
+      <div class="changelog-panel hidden" id="changelog-panel"></div>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("wordmark-home").addEventListener("click", () => location.reload());
+  </script>
+</body>
+</html>
