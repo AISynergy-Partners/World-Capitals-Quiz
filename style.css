@@ -735,3 +735,9 @@ main {
   color: var(--text-dim);
   line-height: 1.5;
 }
+
+.copyright {
+  margin-top: 18px;
+  font-size: 0.68rem;
+  color: var(--text-faint);
+}
